@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class ExcelUtility {
 
-    public static ArrayList<ArrayList<String>> getData(String path, String sheetName, int sutunSayisi) {
+    public static ArrayList<ArrayList<String>> getData(String path, String sheetName, int column) {
         Sheet sheet = null;
         try {
             FileInputStream inputStream = new FileInputStream(path);
@@ -21,30 +21,30 @@ public class ExcelUtility {
             System.out.println(ex.getMessage());
         }
 
-        ArrayList<ArrayList<String>> tablo = new ArrayList<>();
+        ArrayList<ArrayList<String>> table = new ArrayList<>();
         for (int i = 0; i < sheet.getPhysicalNumberOfRows(); i++) {
 
             ArrayList<String> satir = new ArrayList<>();
-            for (int j = 0; j < sutunSayisi; j++) {
+            for (int j = 0; j < column; j++) {
                 satir.add(sheet.getRow(i).getCell(j).toString());
             }
 
-            tablo.add(satir);
+            table.add(satir);
         }
 
-        return tablo;
+        return table;
     }
 
-    public static void writeToExcel(String path, String testSonuc) {
+    public static void writeToExcel(String path, String testResult) {
         File dosya = new File(path);
 
         if (!dosya.exists()) {
             XSSFWorkbook workbook = new XSSFWorkbook();
             XSSFSheet sheet = workbook.createSheet("Scenarios");
 
-            Row yeniSatir = sheet.createRow(0);
-            Cell yeniHucre = yeniSatir.createCell(0);
-            yeniHucre.setCellValue(testSonuc);
+            Row newRow = sheet.createRow(0);
+            Cell newCell = newRow.createCell(0);
+            newCell.setCellValue(testResult);
 
             try {
                 FileOutputStream outputStream = new FileOutputStream(path);
@@ -68,10 +68,10 @@ public class ExcelUtility {
                 System.out.println(ex.getMessage());
             }
 
-            int satirMiktar = sheet.getPhysicalNumberOfRows();
-            Row yeniSatir = sheet.createRow(satirMiktar);
-            Cell yeniHucre = yeniSatir.createCell(0);
-            yeniHucre.setCellValue(testSonuc);
+            int rowTotal = sheet.getPhysicalNumberOfRows();
+            Row newRow = sheet.createRow(rowTotal);
+            Cell newRowCell = newRow.createCell(0);
+            newRowCell.setCellValue(testResult);
 
             try {
                 inputStream.close();
