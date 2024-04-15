@@ -12,5 +12,6 @@ Feature:Adding and removing items funcionality
       | subMenuJackets |
     And Select Product Size, Color and Add to Cart
     And Control of Product Price and Total Price
-
+    And Emptying the Products From the Orderbox
+    Then The user should see There are no items in your shopping cart.
 

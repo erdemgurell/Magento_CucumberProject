@@ -3,9 +3,11 @@ package stepDefinitions;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 import pages.Parent;
 import pages.US705_Content;
-
 import java.util.List;
 
 public class AddingAndRemovingSteps extends Parent {
@@ -36,81 +38,136 @@ public class AddingAndRemovingSteps extends Parent {
         for (int i = 0; i < 3; i++) {
             switch (us5.productItemName.get(randomGenerator(11)).getText()) {
                 case "Proteus Fitness Jackshirt":
-                    myClick(us5.productSize1.get(randomGenerator(5)));
-                    myClick(us5.productColor1.get(randomGenerator(3)));
-                    myClick(us5.addToCartBtn.get(0));
-                    waitUntilElementToBeClickable(us5.addToCartBtn.get(0));
-                    break;
+
+                    myClick(us5.productNameLink.get(0));
+                    waitUntilElementToBeClickable(us5.addToCartBtn);
+                    myClick(us5.productSize.get(randomGenerator(5)));
+                    myClick(us5.productColor.get(randomGenerator(3)));
+                    myClick(us5.addToCartBtn);
+                    waitUntilVisibilityOf(us5.addedProductShoppingCartText);
+                    myClick(us5.jackestLink);break;
                 case "Montana Wind Jacket":
-                    myClick(us5.productSize2.get(randomGenerator(5)));
-                    myClick(us5.productColor2.get(randomGenerator(3)));
-                    myClick(us5.addToCartBtn.get(1));
-                    waitUntilElementToBeClickable(us5.addToCartBtn.get(1));
-                    break;
+                    myClick(us5.productNameLink.get(1));
+                    waitUntilElementToBeClickable(us5.addToCartBtn);
+                    myClick(us5.productSize.get(randomGenerator(5)));
+                    myClick(us5.productColor.get(randomGenerator(3)));
+                    myClick(us5.addToCartBtn);
+                    waitUntilVisibilityOf(us5.addedProductShoppingCartText);
+                    myClick(us5.jackestLink);break;
                 case "Jupiter All-Weather Trainer":
-                    myClick(us5.productSize3.get(randomGenerator(5)));
-                    myClick(us5.productColor3.get(randomGenerator(3)));
-                    myClick(us5.addToCartBtn.get(2));
-                    waitUntilElementToBeClickable(us5.addToCartBtn.get(2));
-                    break;
+                    myClick(us5.productNameLink.get(2));
+                    waitUntilElementToBeClickable(us5.addToCartBtn);
+                    myClick(us5.productSize.get(randomGenerator(5)));
+                    myClick(us5.productColor.get(randomGenerator(3)));
+                    myClick(us5.addToCartBtn);
+                    waitUntilVisibilityOf(us5.addedProductShoppingCartText);
+                    myClick(us5.jackestLink);break;
                 case "Typhon Performance Fleece-lined Jacket":
-                    myClick(us5.productSize4.get(randomGenerator(5)));
-                    myClick(us5.productColor4.get(randomGenerator(3)));
-                    myClick(us5.addToCartBtn.get(3));
-                    waitUntilElementToBeClickable(us5.addToCartBtn.get(3));
-                    break;
+                    myClick(us5.productNameLink.get(3));
+                    waitUntilElementToBeClickable(us5.addToCartBtn);
+                    myClick(us5.productSize.get(randomGenerator(5)));
+                    myClick(us5.productColor.get(randomGenerator(3)));
+                    myClick(us5.addToCartBtn);
+                    waitUntilVisibilityOf(us5.addedProductShoppingCartText);
+                    myClick(us5.jackestLink);break;
                 case "Mars HeatTech™ Pullover":
-                    myClick(us5.productSize5.get(randomGenerator(5)));
-                    myClick(us5.productColor5.get(randomGenerator(3)));
-                    myClick(us5.addToCartBtn.get(4));
-                    waitUntilElementToBeClickable(us5.addToCartBtn.get(4));
-                    break;
+                    myClick(us5.productNameLink.get(4));
+                    waitUntilElementToBeClickable(us5.addToCartBtn);
+                    myClick(us5.productSize.get(randomGenerator(5)));
+                    myClick(us5.productColor.get(randomGenerator(3)));
+                    myClick(us5.addToCartBtn);
+                    waitUntilVisibilityOf(us5.addedProductShoppingCartText);
+                    myClick(us5.jackestLink);break;
                 case "Taurus Elements Shell":
-                    myClick(us5.productSize6.get(randomGenerator(5)));
-                    myClick(us5.productColor6.get(randomGenerator(3)));
-                    myClick(us5.addToCartBtn.get(5));
-                    waitUntilElementToBeClickable(us5.addToCartBtn.get(5));
-                    break;
+                    myClick(us5.productNameLink.get(5));
+                    waitUntilElementToBeClickable(us5.addToCartBtn);
+                    myClick(us5.productSize.get(randomGenerator(5)));
+                    myClick(us5.productColor.get(randomGenerator(3)));
+                    myClick(us5.addToCartBtn);
+                    waitUntilVisibilityOf(us5.addedProductShoppingCartText);
+                    myClick(us5.jackestLink);break;
                 case "Lando Gym Jacket":
-                    myClick(us5.productSize7.get(randomGenerator(5)));
-                    myClick(us5.productColor7.get(randomGenerator(3)));
-                    myClick(us5.addToCartBtn.get(6));
-                    waitUntilElementToBeClickable(us5.addToCartBtn.get(6));
-                    break;
+                    myClick(us5.productNameLink.get(6));
+                    waitUntilElementToBeClickable(us5.addToCartBtn);
+                    myClick(us5.productSize.get(randomGenerator(5)));
+                    myClick(us5.productColor.get(randomGenerator(3)));
+                    myClick(us5.addToCartBtn);
+                    waitUntilVisibilityOf(us5.addedProductShoppingCartText);
+                    myClick(us5.jackestLink);break;
                 case "Orion Two-Tone Fitted Jacket":
-                    myClick(us5.productSize8.get(randomGenerator(5)));
-                    myClick(us5.productColor8.get(randomGenerator(3)));
-                    myClick(us5.addToCartBtn.get(7));
-                    waitUntilElementToBeClickable(us5.addToCartBtn.get(7));
-                    break;
+                    myClick(us5.productNameLink.get(7));
+                    waitUntilElementToBeClickable(us5.addToCartBtn);
+                    myClick(us5.productSize.get(randomGenerator(5)));
+                    myClick(us5.productColor.get(randomGenerator(3)));
+                    myClick(us5.addToCartBtn);
+                    waitUntilVisibilityOf(us5.addedProductShoppingCartText);
+                    myClick(us5.jackestLink);break;
                 case "Kenobi Trail Jacket":
-                    myClick(us5.productSize9.get(randomGenerator(5)));
-                    myClick(us5.productColor9.get(randomGenerator(3)));
-                    myClick(us5.addToCartBtn.get(8));
-                    waitUntilElementToBeClickable(us5.addToCartBtn.get(8));
-                    break;
+                    myClick(us5.productNameLink.get(8));
+                    waitUntilElementToBeClickable(us5.addToCartBtn);
+                    myClick(us5.productSize.get(randomGenerator(5)));
+                    myClick(us5.productColor.get(randomGenerator(3)));
+                    myClick(us5.addToCartBtn);
+                    waitUntilVisibilityOf(us5.addedProductShoppingCartText);
+                    myClick(us5.jackestLink);break;
                 case "Hyperion Elements Jacket":
-                    myClick(us5.productSize10.get(randomGenerator(5)));
-                    myClick(us5.productColor10.get(randomGenerator(3)));
-                    myClick(us5.addToCartBtn.get(9));
-                    waitUntilElementToBeClickable(us5.addToCartBtn.get(9));
-                    break;
+                    myClick(us5.productNameLink.get(9));
+                    waitUntilElementToBeClickable(us5.addToCartBtn);
+                    myClick(us5.productSize.get(randomGenerator(5)));
+                    myClick(us5.productColor.get(randomGenerator(3)));
+                    myClick(us5.addToCartBtn);
+                    waitUntilVisibilityOf(us5.addedProductShoppingCartText);
+                    myClick(us5.jackestLink);break;
                 case "Beaumont Summit Kit":
-                    myClick(us5.productSize11.get(randomGenerator(5)));
-                    myClick(us5.productColor11.get(randomGenerator(3)));
-                    myClick(us5.addToCartBtn.get(10));
-                    waitUntilElementToBeClickable(us5.addToCartBtn.get(10));
-                    break;
+                    myClick(us5.productNameLink.get(10));
+                    waitUntilElementToBeClickable(us5.addToCartBtn);
+                    myClick(us5.productSize.get(randomGenerator(5)));
+                    myClick(us5.productColor.get(randomGenerator(3)));
+                    myClick(us5.addToCartBtn);
+                    waitUntilVisibilityOf(us5.addedProductShoppingCartText);
+                    myClick(us5.jackestLink);break;
             }
-            wait(3);
-
         }
-
     }
 
     @And("Control of Product Price and Total Price")
     public void controlOfProductPriceAndTotalPrice() {
 
+        myClick(us5.orderBox);
+        double total = 0;
 
+        for (int i = 0; i < us5.productPrice.size(); i++) {
+            String price = us5.productPrice.get(i).getText().replaceAll("[^0-9,.]", "");
+            double dbPrice = Double.parseDouble(price);
+            total = total + dbPrice;
+
+        }
+
+        String subTotal = us5.subTotal.getText().replaceAll("[^0-9,.]", "");
+        double dbSubTotal = Double.parseDouble(subTotal);
+
+        Assert.assertTrue(total == dbSubTotal,
+                "The price of the products is not equal to the total price");
+
+        System.out.println("Total Price=" + dbSubTotal);
+        System.out.println("Product Price=" + total);
+    }
+
+    @And("Emptying the Products From the Orderbox")
+    public void emptyingTheProductsFromTheOrderbox() {
+
+        for (int i = 0; i <= us5.deleteBtn.size() + 1; i++) {
+
+            myJsClick(us5.deleteBtn.get(0));
+            myJsClick(us5.okBtn);
+            wait.until(ExpectedConditions.invisibilityOf(us5.deleteBtn.get(0)));
+        }
+
+    }
+
+    @Then("The user should see There are no items in your shopping cart.")
+    public void theUserShouldSeeThereAreNoItemsInYourShoppingCart() {
+
+        verifyContainsText(us5.succesMesage, "You have no items in your shopping cart.");
     }
 }
