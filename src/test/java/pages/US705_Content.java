@@ -22,47 +22,71 @@ public class US705_Content extends Parent {
     @FindBy(xpath = "(//*[text()='Jackets'])[2]")
     public WebElement subMenuJackets;
 
-    @FindBy(css = "[aria-label='XS']")
-    public List<WebElement> sizeXs;
+    @FindBy(xpath = "(//div[@aria-label='Size'])[1]/div")
+    public List<WebElement> productSize1;
 
-    @FindBy(css = "[aria-label='S']")
-    public List<WebElement> sizeS;
+    @FindBy(xpath = "(//div[@aria-label='Size'])[2]/div")
+    public List<WebElement> productSize2;
 
-    @FindBy(css = "[aria-label='M']")
-    public List<WebElement> sizeM;
+    @FindBy(xpath = "(//div[@aria-label='Size'])[3]/div")
+    public List<WebElement> productSize3;
 
-    @FindBy(css = "[aria-label='L']")
-    public List<WebElement> sizeL;
+    @FindBy(xpath = "(//div[@aria-label='Size'])[4]/div")
+    public List<WebElement> productSize4;
 
-    @FindBy(css = "[aria-label='XL']")
-    public List<WebElement> sizeXl;
+    @FindBy(xpath = "(//div[@aria-label='Size'])[5]/div")
+    public List<WebElement> productSize5;
 
-    @FindBy(css = "[option-label='Black']")
-    public List<WebElement> colorBlack;
+    @FindBy(xpath = "(//div[@aria-label='Size'])[6]/div")
+    public List<WebElement> productSize6;
 
-    @FindBy(css = "[option-label='Blue']")
-    public List<WebElement> colorBlue;
+    @FindBy(xpath = "(//div[@aria-label='Size'])[7]/div")
+    public List<WebElement> productSize7;
 
-    @FindBy(css = "[option-label='Orange']")
-    public List<WebElement> colorOrange;
+    @FindBy(xpath = "(//div[@aria-label='Size'])[8]/div")
+    public List<WebElement> productSize8;
 
-    @FindBy(css = "[option-label='Green']")
-    public List<WebElement> colorGreen;
+    @FindBy(xpath = "(//div[@aria-label='Size'])[9]/div")
+    public List<WebElement> productSize9;
 
-    @FindBy(css = "[option-label='Red']")
-    public List<WebElement> colorRed;
+    @FindBy(xpath = "(//div[@aria-label='Size'])[10]/div")
+    public List<WebElement> productSize10;
 
-    @FindBy(css = "[option-label='Purple']")
-    public List<WebElement> colorPurple;
+    @FindBy(xpath = "(//div[@aria-label='Size'])[11]/div")
+    public List<WebElement> productSize11;
 
-    @FindBy(css = "[option-label='White]")
-    public List<WebElement> colorWhite;
+    @FindBy(xpath = "(//div[@aria-label='Color'])[1]/div")
+    public List<WebElement> productColor1;
 
-    @FindBy(css = "[option-label='Gray']")
-    public List<WebElement> colorGray;
+    @FindBy(xpath = "(//div[@aria-label='Color'])[2]/div")
+    public List<WebElement> productColor2;
 
-    @FindBy(css = "[option-label='Yellow']")
-    public List<WebElement> colorYellow;
+    @FindBy(xpath = "(//div[@aria-label='Color'])[3]/div")
+    public List<WebElement> productColor3;
+
+    @FindBy(xpath = "(//div[@aria-label='Color'])[4]/div")
+    public List<WebElement> productColor4;
+
+    @FindBy(xpath = "(//div[@aria-label='Color'])[5]/div")
+    public List<WebElement> productColor5;
+
+    @FindBy(xpath = "(//div[@aria-label='Color'])[6]/div")
+    public List<WebElement> productColor6;
+
+    @FindBy(xpath = "(//div[@aria-label='Color'])[7]/div")
+    public List<WebElement> productColor7;
+
+    @FindBy(xpath = "(//div[@aria-label='Color'])[8]/div")
+    public List<WebElement> productColor8;
+
+    @FindBy(xpath = "(//div[@aria-label='Color'])[9]/div")
+    public List<WebElement> productColor9;
+
+    @FindBy(xpath = "(//div[@aria-label='Color'])[10]/div")
+    public List<WebElement> productColor10;
+
+    @FindBy(xpath = "(//div[@aria-label='Color'])[11]/div")
+    public List<WebElement> productColor11;
 
     @FindBy(css = "[title='Add to Cart']")
     public List<WebElement> addToCartBtn;
@@ -72,6 +96,15 @@ public class US705_Content extends Parent {
 
     @FindBy(css = "[aria-label='Size']")
     public List<WebElement> sizeSet;
+
+    @FindBy(css = "[class='counter-number']")
+    public WebElement productNumber;
+
+    @FindBy(xpath = "(//span[@class='price'])[1]")
+    public WebElement subTotal;
+
+    @FindBy(css = "[class='minicart-price'] span")
+    public List<WebElement> productPrice;
 
 
     public WebElement getWebElement(String elements) {

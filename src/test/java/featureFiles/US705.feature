@@ -5,9 +5,12 @@ Feature:Adding and removing items funcionality
 
   Scenario: Adding and removing items from the shopping cart
     Given Hoverover on the Element
-    |tableMen|
-    |subMenuTops|
+      | tableMen    |
+      | subMenuTops |
 
     And Click on the Element
-    |subMenuJackets|
+      | subMenuJackets |
     And Select Product Size, Color and Add to Cart
+    And Control of Product Price and Total Price
+
+
