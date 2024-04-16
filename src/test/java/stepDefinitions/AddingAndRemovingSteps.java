@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import pages.Parent;
 import pages.US705_Content;
+
 import java.util.List;
 
 public class AddingAndRemovingSteps extends Parent {
@@ -45,7 +46,8 @@ public class AddingAndRemovingSteps extends Parent {
                     myClick(us5.productColor.get(randomGenerator(3)));
                     myClick(us5.addToCartBtn);
                     waitUntilVisibilityOf(us5.addedProductShoppingCartText);
-                    myClick(us5.jackestLink);break;
+                    myClick(us5.jackestLink);
+                    break;
                 case "Montana Wind Jacket":
                     myClick(us5.productNameLink.get(1));
                     waitUntilElementToBeClickable(us5.addToCartBtn);
@@ -53,7 +55,8 @@ public class AddingAndRemovingSteps extends Parent {
                     myClick(us5.productColor.get(randomGenerator(3)));
                     myClick(us5.addToCartBtn);
                     waitUntilVisibilityOf(us5.addedProductShoppingCartText);
-                    myClick(us5.jackestLink);break;
+                    myClick(us5.jackestLink);
+                    break;
                 case "Jupiter All-Weather Trainer":
                     myClick(us5.productNameLink.get(2));
                     waitUntilElementToBeClickable(us5.addToCartBtn);
@@ -61,7 +64,8 @@ public class AddingAndRemovingSteps extends Parent {
                     myClick(us5.productColor.get(randomGenerator(3)));
                     myClick(us5.addToCartBtn);
                     waitUntilVisibilityOf(us5.addedProductShoppingCartText);
-                    myClick(us5.jackestLink);break;
+                    myClick(us5.jackestLink);
+                    break;
                 case "Typhon Performance Fleece-lined Jacket":
                     myClick(us5.productNameLink.get(3));
                     waitUntilElementToBeClickable(us5.addToCartBtn);
@@ -69,7 +73,8 @@ public class AddingAndRemovingSteps extends Parent {
                     myClick(us5.productColor.get(randomGenerator(3)));
                     myClick(us5.addToCartBtn);
                     waitUntilVisibilityOf(us5.addedProductShoppingCartText);
-                    myClick(us5.jackestLink);break;
+                    myClick(us5.jackestLink);
+                    break;
                 case "Mars HeatTech™ Pullover":
                     myClick(us5.productNameLink.get(4));
                     waitUntilElementToBeClickable(us5.addToCartBtn);
@@ -77,7 +82,8 @@ public class AddingAndRemovingSteps extends Parent {
                     myClick(us5.productColor.get(randomGenerator(3)));
                     myClick(us5.addToCartBtn);
                     waitUntilVisibilityOf(us5.addedProductShoppingCartText);
-                    myClick(us5.jackestLink);break;
+                    myClick(us5.jackestLink);
+                    break;
                 case "Taurus Elements Shell":
                     myClick(us5.productNameLink.get(5));
                     waitUntilElementToBeClickable(us5.addToCartBtn);
@@ -85,7 +91,8 @@ public class AddingAndRemovingSteps extends Parent {
                     myClick(us5.productColor.get(randomGenerator(3)));
                     myClick(us5.addToCartBtn);
                     waitUntilVisibilityOf(us5.addedProductShoppingCartText);
-                    myClick(us5.jackestLink);break;
+                    myClick(us5.jackestLink);
+                    break;
                 case "Lando Gym Jacket":
                     myClick(us5.productNameLink.get(6));
                     waitUntilElementToBeClickable(us5.addToCartBtn);
@@ -93,7 +100,8 @@ public class AddingAndRemovingSteps extends Parent {
                     myClick(us5.productColor.get(randomGenerator(3)));
                     myClick(us5.addToCartBtn);
                     waitUntilVisibilityOf(us5.addedProductShoppingCartText);
-                    myClick(us5.jackestLink);break;
+                    myClick(us5.jackestLink);
+                    break;
                 case "Orion Two-Tone Fitted Jacket":
                     myClick(us5.productNameLink.get(7));
                     waitUntilElementToBeClickable(us5.addToCartBtn);
@@ -101,7 +109,8 @@ public class AddingAndRemovingSteps extends Parent {
                     myClick(us5.productColor.get(randomGenerator(3)));
                     myClick(us5.addToCartBtn);
                     waitUntilVisibilityOf(us5.addedProductShoppingCartText);
-                    myClick(us5.jackestLink);break;
+                    myClick(us5.jackestLink);
+                    break;
                 case "Kenobi Trail Jacket":
                     myClick(us5.productNameLink.get(8));
                     waitUntilElementToBeClickable(us5.addToCartBtn);
@@ -109,7 +118,8 @@ public class AddingAndRemovingSteps extends Parent {
                     myClick(us5.productColor.get(randomGenerator(3)));
                     myClick(us5.addToCartBtn);
                     waitUntilVisibilityOf(us5.addedProductShoppingCartText);
-                    myClick(us5.jackestLink);break;
+                    myClick(us5.jackestLink);
+                    break;
                 case "Hyperion Elements Jacket":
                     myClick(us5.productNameLink.get(9));
                     waitUntilElementToBeClickable(us5.addToCartBtn);
@@ -117,7 +127,8 @@ public class AddingAndRemovingSteps extends Parent {
                     myClick(us5.productColor.get(randomGenerator(3)));
                     myClick(us5.addToCartBtn);
                     waitUntilVisibilityOf(us5.addedProductShoppingCartText);
-                    myClick(us5.jackestLink);break;
+                    myClick(us5.jackestLink);
+                    break;
                 case "Beaumont Summit Kit":
                     myClick(us5.productNameLink.get(10));
                     waitUntilElementToBeClickable(us5.addToCartBtn);
@@ -125,7 +136,8 @@ public class AddingAndRemovingSteps extends Parent {
                     myClick(us5.productColor.get(randomGenerator(3)));
                     myClick(us5.addToCartBtn);
                     waitUntilVisibilityOf(us5.addedProductShoppingCartText);
-                    myClick(us5.jackestLink);break;
+                    myClick(us5.jackestLink);
+                    break;
             }
         }
     }
@@ -153,8 +165,15 @@ public class AddingAndRemovingSteps extends Parent {
         System.out.println("Product Price=" + total);
     }
 
-    @And("Emptying the Products From the Orderbox")
-    public void emptyingTheProductsFromTheOrderbox() {
+
+    @Then("The user should see There are no items in your shopping cart.")
+    public void theUserShouldSeeThereAreNoItemsInYourShoppingCart() {
+
+        verifyContainsText(us5.succesMesage, "You have no items in your shopping cart.");
+    }
+
+    @And("Emptying the Products From the Order box")
+    public void emptyingTheProductsFromTheOrderBox() {
 
         for (int i = 0; i <= us5.deleteBtn.size() + 1; i++) {
 
@@ -163,11 +182,5 @@ public class AddingAndRemovingSteps extends Parent {
             wait.until(ExpectedConditions.invisibilityOf(us5.deleteBtn.get(0)));
         }
 
-    }
-
-    @Then("The user should see There are no items in your shopping cart.")
-    public void theUserShouldSeeThereAreNoItemsInYourShoppingCart() {
-
-        verifyContainsText(us5.succesMesage, "You have no items in your shopping cart.");
     }
 }
