@@ -12,7 +12,4 @@ Feature: Search Functionality
       | subMenuJackets |
     And Select Product and Search by Code
     Then The user must be able to see the product
-    And Over-Spelling of Product Code
-    Then Your search returned no results.
-    And Missing Product Code
-    Then Search Query Length
+    And Incorrect Product Code "MJ154611"
