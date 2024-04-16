@@ -25,25 +25,17 @@ public class SearchFunctionalitySteps extends Parent {
 
     }
 
-    @And("Over-Spelling of Product Code")
-    public void overSpellingOfProductCode() {
-        mySendKeys(us7.searchBoxPlc, "MJ01111");
-        myClick(us7.searchBoxCl);
-    }
 
-    @Then("Your search returned no results.")
-    public void yourSearchReturnedNoResults() {
-        verifyContainsText(us7.noResultText, "no results.");
-    }
+    @And("Incorrect Product Code {string}")
+    public void ıncorrectProductCode(String code) {
+        mySendKeys(us7.searchBoxPlc, code);
+        if (code.length() < 3) {
+            myClick(us7.searchBoxCl);
+            verifyContainsText(us7.noResultText, "length is 3");
+        } else if (code.length() > 4) {
+            myClick(us7.searchBoxCl);
+            verifyContainsText(us7.noResultText, "no results.");
+        }
 
-    @And("Missing Product Code")
-    public void missingProductCode() {
-        mySendKeys(us7.searchBoxPlc, "MJ");
-        myClick(us7.searchBoxCl);
-    }
-
-    @Then("Search Query Length")
-    public void searchQueryLength() {
-        verifyContainsText(us7.noResultText, "length is 3");
     }
 }
