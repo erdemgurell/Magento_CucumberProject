@@ -2,6 +2,8 @@ Feature:Adding and removing items functionality
 
   Background:
     Given Navigate to Magento website
+    Then Click on the Sign In button
+    And Enter the email and password then click the login button
 
   Scenario: Adding and removing items from the shopping cart
     Given Hoverover on the Element
