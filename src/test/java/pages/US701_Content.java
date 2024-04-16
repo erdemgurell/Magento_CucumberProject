@@ -17,6 +17,9 @@ public class US701_Content {
     @FindBy(linkText = "Create an Account")
     public WebElement createAccountBtn;
 
+
+
+
     @FindBy(css = "button[title=\"Create an Account\"]")
     public WebElement submitRegistrationBtn;
 
