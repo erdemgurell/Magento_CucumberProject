@@ -18,8 +18,6 @@ public class US701_Content {
     public WebElement createAccountBtn;
 
 
-
-
     @FindBy(css = "button[title=\"Create an Account\"]")
     public WebElement submitRegistrationBtn;
 
