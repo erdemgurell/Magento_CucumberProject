@@ -1,4 +1,4 @@
-Feature:Adding and removing items funcionality
+Feature:Adding and removing items functionality
 
   Background:
     Given Navigate to Magento website
@@ -12,6 +12,6 @@ Feature:Adding and removing items funcionality
       | subMenuJackets |
     And Select Product Size, Color and Add to Cart
     And Control of Product Price and Total Price
-    And Emptying the Products From the Orderbox
+    And Emptying the Products From the Order box
     Then The user should see There are no items in your shopping cart.
 
