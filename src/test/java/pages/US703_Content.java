@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.GWD;
 
-public class US703_Content {
+public class US703_Content extends Parent{
     public US703_Content(){
         PageFactory.initElements(GWD.getDriver(),this);
     }
@@ -26,7 +26,7 @@ public class US703_Content {
     public WebElement actionsMenu;
 
     @FindBy(linkText = "My Account")
-    public WebElement myAccountBt;
+    public WebElement myAccountBtn;
 
     @FindBy(linkText = "Address Book")
     public WebElement adressBook;
@@ -66,6 +66,33 @@ public class US703_Content {
 
     @FindBy(xpath = "//div[@class='primary']/button[@class='action save primary']")
     public WebElement saveAdressBtn;
+
+    @FindBy(xpath = "//*[@id=\"maincontent\"]/div[2]/div[1]/div[6]/div[1]/button/span")
+    public WebElement addNewAdressBtn;
+
+    @FindBy(xpath = "//*[@id=\"maincontent\"]/div[1]/div[2]/div/div/div")
+    public WebElement verification;
+
+
+    public WebElement getWebElement(String strElement){
+
+        switch (strElement){
+            case "firstName" : return this.firstName;
+            case "lastName" : return this.lastName;
+            case "company" : return this.company;
+            case "telephone" : return this.telephone;
+            case "street_1" : return this.street_1;
+            case "street_2" : return this.street_2;
+            case "street_3" : return this.street_3;
+            case "city" : return this.city;
+            case "zip" : return this.zip;
+
+
+        }
+        return null;
+    }
+
+
 
 
 
