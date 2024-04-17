@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.GWD;
 
-public class US703_Content extends Parent{
-    public US703_Content(){
-        PageFactory.initElements(GWD.getDriver(),this);
+public class US703_Content extends Parent {
+    public US703_Content() {
+        PageFactory.initElements(GWD.getDriver(), this);
     }
 
     @FindBy(linkText = "Sign In")
@@ -74,29 +74,32 @@ public class US703_Content extends Parent{
     public WebElement verification;
 
 
-    public WebElement getWebElement(String strElement){
+    public WebElement getWebElement(String strElement) {
 
-        switch (strElement){
-            case "firstName" : return this.firstName;
-            case "lastName" : return this.lastName;
-            case "company" : return this.company;
-            case "telephone" : return this.telephone;
-            case "street_1" : return this.street_1;
-            case "street_2" : return this.street_2;
-            case "street_3" : return this.street_3;
-            case "city" : return this.city;
-            case "zip" : return this.zip;
+        switch (strElement) {
+            case "firstName":
+                return this.firstName;
+            case "lastName":
+                return this.lastName;
+            case "company":
+                return this.company;
+            case "telephone":
+                return this.telephone;
+            case "street_1":
+                return this.street_1;
+            case "street_2":
+                return this.street_2;
+            case "street_3":
+                return this.street_3;
+            case "city":
+                return this.city;
+            case "zip":
+                return this.zip;
 
 
         }
         return null;
     }
-
-
-
-
-
-
 
 
 }
