@@ -38,6 +38,15 @@ public class US708_Content {
     @FindBy(css = "div[class=\"block-title\"] span[data-bind=\"text: wishlist().counter\"]")
     public WebElement wlCounter;
 
+    @FindBy(css = "div[class=\"panel header\"] li button")
+    public WebElement customerMenu;
+
+    @FindBy(linkText = "My Wish List")
+    public WebElement myWishListBtn;
+
+    @FindBy(css = "a[title=\"Remove Item\"]")
+    public List<WebElement> removeItemButtons;
+
     @FindBy(xpath = "(//*[@class='ui-menu-icon ui-icon ui-icon-carat-1-e'])[4]")
     public WebElement tableMen;
 
@@ -46,6 +55,9 @@ public class US708_Content {
 
     @FindBy(xpath = "(//*[text()='Jackets'])[2]")
     public WebElement subMenuJackets;
+
+    @FindBy(xpath = "//div[contains(text(),\"removed\")]")
+    public WebElement removedMessage;
 
     public WebElement getWebElement(String elements) {
         int size = products.size();
@@ -61,8 +73,15 @@ public class US708_Content {
                 return this.subMenuTops;
             case "subMenuJackets":
                 return this.subMenuJackets;
+            case "customerMenu":
+                return this.customerMenu;
+            case "myWishListBtn":
+                return this.myWishListBtn;
+            case "removedMessage":
+                return this.removedMessage;
+            case "wishlistProducts":
+                return this.wishlistProducts.get(0);
         }
-
         return null;
     }
 

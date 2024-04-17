@@ -1,4 +1,5 @@
-Feature: Wish List Functionality
+@WishList
+Feature: Adding Products to the Wish List Functionality
 
   Background:
     Given Navigate to Magento website
