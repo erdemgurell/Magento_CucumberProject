@@ -24,13 +24,13 @@ public class US704_Content extends Parent {
     public WebElement training;
     @FindBy(xpath = "((//div[@id='store.menu']//ul)[1]/li)[6]")
     public WebElement sale;
-    @FindBy(xpath = "(((//div[@id='store.menu']//ul)[1]/li)[2]/ul/li)[1]")
+    @FindBy(xpath = "(((//div[@id='store.menu']//ul)[1]/li)[2]/ul/li)[1]/a")
     public WebElement womenTops;
-    @FindBy(xpath = "(((//div[@id='store.menu']//ul)[1]/li)[2]/ul/li)[2]")
+    @FindBy(xpath = "(((//div[@id='store.menu']//ul)[1]/li)[2]/ul/li)[2]/a")
     public WebElement womenBottoms;
-    @FindBy(xpath = "(((//div[@id='store.menu']//ul)[1]/li)[3]/ul/li)[1]")
+    @FindBy(xpath = "(((//div[@id='store.menu']//ul)[1]/li)[3]/ul/li)[1]/a")
     public WebElement menTops;
-    @FindBy(xpath = "(((//div[@id='store.menu']//ul)[1]/li)[3]/ul/li)[2]")
+    @FindBy(xpath = "(((//div[@id='store.menu']//ul)[1]/li)[3]/ul/li)[2]/a")
     public WebElement menBottoms;
     @FindBy(xpath = "((//div[@id='store.menu']//ul)[1]/li)[5]/ul/li")
     public WebElement trainingSubCat;
