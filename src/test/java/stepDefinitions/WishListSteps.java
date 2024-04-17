@@ -31,7 +31,6 @@ public class WishListSteps extends Parent {
 
     @Then("Hover over on the Product and click Wish List button")
     public void hoverOverOnTheProductAndClickWishListButton() {
-
         WebElement e = us8.getWebElement("products");
         hoverOver(e);
         wait.until(ExpectedConditions.
@@ -47,5 +46,19 @@ public class WishListSteps extends Parent {
 
         int wlSize = Integer.parseInt(splitted);
         Assert.assertEquals(wlSize,us8.wishlistProducts.size());
+    }
+
+    @Then("Hover over on the Product and click remove from list button")
+    public void hoverOverOnTheProductAndClickRemoveFromListButton() {
+        WebElement e = us8.getWebElement("wishlistProducts");
+        hoverOver(e);
+        wait.until(ExpectedConditions.
+                visibilityOf(us8.removeItemButtons.get(0)));
+        myJsClick(us8.removeItemButtons.get(0));
+    }
+
+    @And("Check if the item removed message displayed")
+    public void checkIfTheItemRemovedMessageDisplayed() {
+        Assert.assertTrue(us8.removedMessage.getText().contains("removed"));
     }
 }
