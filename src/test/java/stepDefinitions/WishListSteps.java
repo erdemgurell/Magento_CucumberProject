@@ -42,10 +42,10 @@ public class WishListSteps extends Parent {
     public void checkIfTheNumberOfProductsInTheWishListIsCorrect() {
         wait.until(ExpectedConditions.visibilityOf(us8.wlCounter));
         String splitted = us8.wlCounter.getText().
-                replaceAll("[^0-9]","");
+                replaceAll("[^0-9]", "");
 
         int wlSize = Integer.parseInt(splitted);
-        Assert.assertEquals(wlSize,us8.wishlistProducts.size());
+        Assert.assertEquals(wlSize, us8.wishlistProducts.size());
     }
 
     @Then("Hover over on the Product and click remove from list button")
