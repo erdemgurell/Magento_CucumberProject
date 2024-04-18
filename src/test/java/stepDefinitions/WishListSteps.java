@@ -62,13 +62,13 @@ public class WishListSteps extends Parent {
         Assert.assertTrue(us8.removedMessage.getText().contains("removed"));
     }
 
-    @Then("Hover over on the Product and update the quantity to 3")
-    public void hoverOverOnTheProductAndUpdateTheQuantity() {
+    @Then("Hover over on the Product and update the quantity to {string}")
+    public void hoverOverOnTheProductAndUpdateTheQuantity(String qt) {
         WebElement e = us8.getWebElement("wishlistProducts");
         hoverOver(e);
         wait.until(ExpectedConditions.
                 visibilityOf(us8.quantityPlaceholders.get(0)));
-        mySendKeys(us8.quantityPlaceholders.get(0),"3");
+        mySendKeys(us8.quantityPlaceholders.get(0),qt);
         hoverOver(us8.wlCounter);
     }
 
