@@ -13,30 +13,35 @@ import utilities.GWD;
 
 import javax.tools.Tool;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class TabMenuSteps extends Parent {
     US704_Content cnt = new US704_Content();
-    @When("Hover Over the Main and Sub Categories in the TAB Menu")
-    public void hoverOverTheCategories(DataTable links) {
+
+    @And("Click the Main categories in the TAB Menu")
+    public void clickTheMainCategories(DataTable links) {
+
         List<String> linkList = links.asList(String.class);
         for (int i = 0; i < linkList.size(); i++) {
             WebElement linkWebElement = cnt.getWebElement(linkList.get(i));
-            cnt.waitUntilVisibilityOf(linkWebElement);
-            cnt.hoverOver(linkWebElement);
+            cnt.myClick(linkWebElement);
         }
     }
-   @And("Click the Main categories in the TAB Menu")
-   public void clickTheMainCategories(DataTable links) {
+    @Then("User should be able to see the all main and sub categories")
+    public void userShouldBeAbleToSeeTheAllMainAndSubCategories() {
+        List<String> expectedCategory = Arrays.asList("whatsNew", "women", "womenTops", "womenBottoms",
+                "men", "menTops", "menBottoms", "gear", "training", "sale"
+        );
+        for (String ct : expectedCategory) {
+            WebElement categoryItems = cnt.getWebElement(ct);
+            waitUntilVisibilityOf(categoryItems);
+            scrollToElement(categoryItems);
+            cnt.hoverOver(categoryItems);
+            cnt.wait(1);
 
-       List<String> linkList = links.asList(String.class);
-       for (int i = 0; i < linkList.size(); i++) {
-           WebElement linkWebElement = cnt.getWebElement(linkList.get(i));
-           cnt.myClick(linkWebElement);
-       }
-   }
-
-    @Then("User Should Be Able To See the All Categories")
-    public void userShouldBeAbleToSeeTheAllCategories() {
+            Assert.assertTrue(categoryItems.isDisplayed(), "Sub category " + categoryItems + " is not displayed.");
+        }
     }
 }
