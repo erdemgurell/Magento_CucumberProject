@@ -47,6 +47,9 @@ public class US708_Content {
     @FindBy(css = "a[title=\"Remove Item\"]")
     public List<WebElement> removeItemButtons;
 
+    @FindBy(css = "input[type=\"number\"]")
+    public List<WebElement> quantityPlaceholders;
+
     @FindBy(xpath = "(//*[@class='ui-menu-icon ui-icon ui-icon-carat-1-e'])[4]")
     public WebElement tableMen;
 
@@ -58,6 +61,9 @@ public class US708_Content {
 
     @FindBy(xpath = "//div[contains(text(),\"removed\")]")
     public WebElement removedMessage;
+
+    @FindBy(css = "button[title=\"Update Wish List\"]")
+    public WebElement updateWishListBtn;
 
     public WebElement getWebElement(String elements) {
         int size = products.size();
@@ -81,6 +87,10 @@ public class US708_Content {
                 return this.removedMessage;
             case "wishlistProducts":
                 return this.wishlistProducts.get(0);
+            case "quantityPlaceholders":
+                return this.quantityPlaceholders.get(0);
+            case "updateWishListBtn":
+                return this.updateWishListBtn;
         }
         return null;
     }

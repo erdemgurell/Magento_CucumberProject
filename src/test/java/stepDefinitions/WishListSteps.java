@@ -61,4 +61,23 @@ public class WishListSteps extends Parent {
     public void checkIfTheItemRemovedMessageDisplayed() {
         Assert.assertTrue(us8.removedMessage.getText().contains("removed"));
     }
+
+    @Then("Hover over on the Product and update the quantity to 3")
+    public void hoverOverOnTheProductAndUpdateTheQuantity() {
+        WebElement e = us8.getWebElement("wishlistProducts");
+        hoverOver(e);
+        wait.until(ExpectedConditions.
+                visibilityOf(us8.quantityPlaceholders.get(0)));
+        mySendKeys(us8.quantityPlaceholders.get(0),"3");
+        hoverOver(us8.wlCounter);
+    }
+
+    @Then("Check if the quantity of selected product changed")
+    public void checkIfTheQuantityOfSelectedProductChanged() {
+        WebElement e = us8.getWebElement("wishlistProducts");
+        hoverOver(e);
+        wait.until(ExpectedConditions.
+                visibilityOf(us8.quantityPlaceholders.get(0)));
+        Assert.assertEquals(us8.quantityPlaceholders.get(0).getAttribute("value"), "3");
+    }
 }
