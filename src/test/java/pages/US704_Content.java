@@ -40,7 +40,7 @@ public class US704_Content extends Parent {
     public List<WebElement> menTopsAndBottoms;
     @FindBy(xpath = "((//div[@id='store.menu']//ul)[1]/li)[4]/ul/li")
     public List<WebElement> gearSubCategory;
-    @FindBy(css = "[class='level-top ui-corner-all']")
+    @FindBy(css = "[id='ui-id-2']>li>a")
     public List<WebElement> tabMenu;
     @FindBy(xpath = "(((//div[@id='store.menu']//ul)[1]/li)[2]/ul/li/ul)[1]/li")
     public List<WebElement> womenTopsSubCat;
@@ -50,9 +50,9 @@ public class US704_Content extends Parent {
     public List<WebElement> menTopsSubCat;
     @FindBy(xpath = "(((//div[@id='store.menu']//ul)[1]/li)[3]/ul/li/ul)[2]/li")
     public List<WebElement> menBottomsSubCat;
-    @FindBy(xpath = "((((//div[@id='store.menu']//ul)[1]/li)[2]/ul/li/ul)[1]/li)[1]")
+    @FindBy(xpath = "(//*[text()='Jackets'])[1]")
     public WebElement jacketsWm;
-    @FindBy(xpath = "((((//div[@id='store.menu']//ul)[1]/li)[2]/ul/li/ul)[1]/li)[2]")
+    @FindBy(xpath = "(//*[text()='Hoodies & Sweatshirts'])[1]")
     public WebElement hoodiesWm;
     @FindBy(xpath = "((((//div[@id='store.menu']//ul)[1]/li)[2]/ul/li/ul)[1]/li)[3]")
     public WebElement teesWm;
@@ -74,7 +74,7 @@ public class US704_Content extends Parent {
     public WebElement pantsMn;
     @FindBy(xpath = "((((//div[@id='store.menu']//ul)[1]/li)[3]/ul/li/ul)[2]/li)[2]")
     public WebElement shortsMn;
-    @FindBy(xpath = "(((//div[@id='store.menu']//ul)[1]/li)[4]/ul/li)[1]")
+    @FindBy(xpath = "//span[contains(text(),'Bags')]")
     public WebElement bagsGr;
     @FindBy(xpath = "(((//div[@id='store.menu']//ul)[1]/li)[4]/ul/li)[2]")
     public WebElement fitnessGr;
