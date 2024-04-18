@@ -7,10 +7,14 @@ Feature: Updating Products from the Wish List Functionality
     And Enter the email and password then click the login button
 
   Scenario: Updating the Wish List
+
     Given Click on the Element in Dialog
       | customerMenu  |
       | myWishListBtn |
-    Then Hover over on the Product and update the quantity to 3
+
+    Then Hover over on the Product and update the quantity to "3"
+
     And Click on the Element in Dialog
       | updateWishListBtn |
+
     Then Check if the quantity of selected product changed
