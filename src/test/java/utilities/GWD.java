@@ -55,11 +55,10 @@ public class GWD {
             throw new RuntimeException(e);
         }
 
-        //driver kapat
+
         if (threadDriver.get() != null) {
             threadDriver.get().quit();
-            WebDriver driver =
-                    driver = null;
+            WebDriver driver = null;
             threadDriver.set(driver);
         }
     }
