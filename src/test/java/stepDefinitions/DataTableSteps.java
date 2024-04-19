@@ -15,7 +15,6 @@ public class DataTableSteps extends Parent {
     @Then("Click on the Element in Dialog")
     public void clickOnTheElementInDialog(DataTable dt) {
         List<String> list = dt.asList(String.class);
-
         for (int i = 0; i < list.size(); i++) {
             // GET THE ELEMENT AND CLICK
             myClick(us8.getWebElement(list.get(i)));

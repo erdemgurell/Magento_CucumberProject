@@ -10,17 +10,11 @@ public class AddAddressPOM extends Parent {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
-    @FindBy(linkText = "Sign In")
-    public WebElement signInBtn;
-
     @FindBy(xpath = "//input[@id='email']")
     public WebElement email;
 
     @FindBy(xpath = "//input[@title='Password']")
     public WebElement password;
-
-    @FindBy(xpath = "//div[@class='primary']/button/span")
-    public WebElement loginBtn;
 
     @FindBy(xpath = "//span[@class='customer-name']")
     public WebElement actionsMenu;
@@ -72,32 +66,5 @@ public class AddAddressPOM extends Parent {
 
     @FindBy(xpath = "//*[@id=\"maincontent\"]/div[1]/div[2]/div/div/div")
     public WebElement verification;
-
-
-    public WebElement getWebElement(String strElement) {
-
-        switch (strElement) {
-            case "firstName":
-                return this.firstName;
-            case "lastName":
-                return this.lastName;
-            case "company":
-                return this.company;
-            case "telephone":
-                return this.telephone;
-            case "street_1":
-                return this.street_1;
-            case "street_2":
-                return this.street_2;
-            case "street_3":
-                return this.street_3;
-            case "city":
-                return this.city;
-            case "zip":
-                return this.zip;
-
-        }
-        return null;
-    }
 
 }

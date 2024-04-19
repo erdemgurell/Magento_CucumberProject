@@ -36,8 +36,6 @@ public class OrderingPOM extends Parent {
     public List<WebElement> productColor;
     @FindBy(xpath = "//button[@id='product-addtocart-button']")
     public WebElement addToCartBtn;
-    @FindBy(xpath = "(//span[contains(text(),'Add to Cart')])[1]")
-    public WebElement addToCart1;
     @FindBy(xpath = "(//a[@class='product-item-link'])[1]")
     public WebElement hoodie1;
     @FindBy(xpath = "(//a[@class='product-item-link'])[3]")

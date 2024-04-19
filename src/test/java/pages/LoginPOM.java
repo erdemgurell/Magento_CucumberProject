@@ -7,8 +7,7 @@ import utilities.GWD;
 
 public class LoginPOM extends Parent{
     public LoginPOM() {PageFactory.initElements(GWD.getDriver(),this);}
-    @FindBy(linkText = "Sign In")
-    public WebElement signInLink;
+
 
     @FindBy(id="email")
     public WebElement email;
@@ -24,7 +23,7 @@ public class LoginPOM extends Parent{
     public WebElement nullEmailErrorMessage;
 
     @FindBy(xpath = "(//*[@class='logged-in'])[1]")
-    public WebElement succesLogin;
+    public WebElement successLogin;
 
     @FindBy(xpath = " //*[@data-bind='html: $parent.prepareMessageForHtml(message.text)']")
     public WebElement invalidInformation;

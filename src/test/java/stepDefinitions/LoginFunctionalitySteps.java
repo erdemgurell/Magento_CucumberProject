@@ -14,7 +14,7 @@ public class LoginFunctionalitySteps extends Parent {
         us2.mySendKeys(us2.email, "gafol82072@agaseo.com");
         us2.mySendKeys(us2.password, "test123.");
         us2.myClick(us2.signInBtn);
-        verifyContainsText(us2.succesLogin,"Welcome" );    }
+        verifyContainsText(us2.successLogin,"Welcome" );    }
 
     @Given("Enter the null email and password then click the login button")
     public void enterTheNullEmailAndPasswordThenClickTheLoginButton() {
