@@ -65,6 +65,7 @@ public class US708_Content {
     @FindBy(css = "button[title=\"Update Wish List\"]")
     public WebElement updateWishListBtn;
 
+
     public WebElement getWebElement(String elements) {
         int size = products.size();
         int randNum = Parent.randomGenerator(size);

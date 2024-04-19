@@ -17,7 +17,6 @@ public class US701_Content {
     @FindBy(linkText = "Create an Account")
     public WebElement createAccountBtn;
 
-
     @FindBy(css = "button[title=\"Create an Account\"]")
     public WebElement submitRegistrationBtn;
 
@@ -26,6 +25,5 @@ public class US701_Content {
 
     @FindBy(xpath = "//div[contains(text(),\"Thank you\")]")
     public WebElement accCreatedSuccessMessage;
-
 
 }
