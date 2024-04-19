@@ -4,13 +4,13 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.testng.Assert;
 import pages.Parent;
-import pages.US705_Content;
-import pages.US707_Content;
+import pages.AddingRemovingProductsPOM;
+import pages.SearchFunctionalityPOM;
 
 public class SearchFunctionalitySteps extends Parent {
 
-    US705_Content us5 = new US705_Content();
-    US707_Content us7 = new US707_Content();
+    AddingRemovingProductsPOM us5 = new AddingRemovingProductsPOM();
+    SearchFunctionalityPOM us7 = new SearchFunctionalityPOM();
 
     @And("Select Product and Search by Code")
     public void selectProductAndSearchByCode() {

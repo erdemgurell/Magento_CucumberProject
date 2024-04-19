@@ -5,8 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.GWD;
 
-public class US707_Content extends Parent {
-    public US707_Content() {
+public class SearchFunctionalityPOM extends Parent {
+    public SearchFunctionalityPOM() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 

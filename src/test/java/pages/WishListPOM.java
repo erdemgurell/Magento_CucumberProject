@@ -7,10 +7,10 @@ import utilities.GWD;
 
 import java.util.List;
 
-public class US708_Content {
+public class WishListPOM {
     public static int rand = 0;
 
-    public US708_Content() {
+    public WishListPOM() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 

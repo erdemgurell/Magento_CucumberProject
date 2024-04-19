@@ -7,8 +7,8 @@ import utilities.GWD;
 
 import java.util.List;
 
-public class US706_Content extends Parent {
-    public US706_Content() {
+public class OrderingPOM extends Parent {
+    public OrderingPOM() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 

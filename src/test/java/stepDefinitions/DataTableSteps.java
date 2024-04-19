@@ -5,12 +5,12 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebElement;
 import pages.Parent;
-import pages.US708_Content;
+import pages.WishListPOM;
 
 import java.util.List;
 
 public class DataTableSteps extends Parent {
-    US708_Content us8 = new US708_Content();
+    WishListPOM us8 = new WishListPOM();
 
     @Then("Click on the Element in Dialog")
     public void clickOnTheElementInDialog(DataTable dt) {

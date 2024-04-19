@@ -7,13 +7,13 @@ import io.cucumber.java.en.Then;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import pages.Parent;
-import pages.US705_Content;
+import pages.AddingRemovingProductsPOM;
 
 import java.util.List;
 
 public class AddingAndRemovingSteps extends Parent {
 
-    US705_Content us5 = new US705_Content();
+    AddingRemovingProductsPOM us5 = new AddingRemovingProductsPOM();
 
     @Given("Hover over on the Element")
     public void hoverOverOnTheElement(DataTable dt) {
@@ -45,7 +45,7 @@ public class AddingAndRemovingSteps extends Parent {
                     myClick(us5.productColor.get(randomGenerator(3)));
                     myClick(us5.addToCartBtn);
                     waitUntilVisibilityOf(us5.addedProductShoppingCartText);
-                    myClick(us5.jackestLink);
+                    myClick(us5.jacketsLink);
                     break;
                 case "Montana Wind Jacket":
                     myClick(us5.productNameLink.get(1));
@@ -54,7 +54,7 @@ public class AddingAndRemovingSteps extends Parent {
                     myClick(us5.productColor.get(randomGenerator(3)));
                     myClick(us5.addToCartBtn);
                     waitUntilVisibilityOf(us5.addedProductShoppingCartText);
-                    myClick(us5.jackestLink);
+                    myClick(us5.jacketsLink);
                     break;
                 case "Jupiter All-Weather Trainer":
                     myClick(us5.productNameLink.get(2));
@@ -63,7 +63,7 @@ public class AddingAndRemovingSteps extends Parent {
                     myClick(us5.productColor.get(randomGenerator(3)));
                     myClick(us5.addToCartBtn);
                     waitUntilVisibilityOf(us5.addedProductShoppingCartText);
-                    myClick(us5.jackestLink);
+                    myClick(us5.jacketsLink);
                     break;
                 case "Typhon Performance Fleece-lined Jacket":
                     myClick(us5.productNameLink.get(3));
@@ -72,7 +72,7 @@ public class AddingAndRemovingSteps extends Parent {
                     myClick(us5.productColor.get(randomGenerator(3)));
                     myClick(us5.addToCartBtn);
                     waitUntilVisibilityOf(us5.addedProductShoppingCartText);
-                    myClick(us5.jackestLink);
+                    myClick(us5.jacketsLink);
                     break;
                 case "Mars HeatTech™ Pullover":
                     myClick(us5.productNameLink.get(4));
@@ -81,7 +81,7 @@ public class AddingAndRemovingSteps extends Parent {
                     myClick(us5.productColor.get(randomGenerator(3)));
                     myClick(us5.addToCartBtn);
                     waitUntilVisibilityOf(us5.addedProductShoppingCartText);
-                    myClick(us5.jackestLink);
+                    myClick(us5.jacketsLink);
                     break;
                 case "Taurus Elements Shell":
                     myClick(us5.productNameLink.get(5));
@@ -90,7 +90,7 @@ public class AddingAndRemovingSteps extends Parent {
                     myClick(us5.productColor.get(randomGenerator(3)));
                     myClick(us5.addToCartBtn);
                     waitUntilVisibilityOf(us5.addedProductShoppingCartText);
-                    myClick(us5.jackestLink);
+                    myClick(us5.jacketsLink);
                     break;
                 case "Lando Gym Jacket":
                     myClick(us5.productNameLink.get(6));
@@ -99,7 +99,7 @@ public class AddingAndRemovingSteps extends Parent {
                     myClick(us5.productColor.get(randomGenerator(3)));
                     myClick(us5.addToCartBtn);
                     waitUntilVisibilityOf(us5.addedProductShoppingCartText);
-                    myClick(us5.jackestLink);
+                    myClick(us5.jacketsLink);
                     break;
                 case "Orion Two-Tone Fitted Jacket":
                     myClick(us5.productNameLink.get(7));
@@ -108,7 +108,7 @@ public class AddingAndRemovingSteps extends Parent {
                     myClick(us5.productColor.get(randomGenerator(3)));
                     myClick(us5.addToCartBtn);
                     waitUntilVisibilityOf(us5.addedProductShoppingCartText);
-                    myClick(us5.jackestLink);
+                    myClick(us5.jacketsLink);
                     break;
                 case "Kenobi Trail Jacket":
                     myClick(us5.productNameLink.get(8));
@@ -117,7 +117,7 @@ public class AddingAndRemovingSteps extends Parent {
                     myClick(us5.productColor.get(randomGenerator(3)));
                     myClick(us5.addToCartBtn);
                     waitUntilVisibilityOf(us5.addedProductShoppingCartText);
-                    myClick(us5.jackestLink);
+                    myClick(us5.jacketsLink);
                     break;
                 case "Hyperion Elements Jacket":
                     myClick(us5.productNameLink.get(9));
@@ -126,7 +126,7 @@ public class AddingAndRemovingSteps extends Parent {
                     myClick(us5.productColor.get(randomGenerator(3)));
                     myClick(us5.addToCartBtn);
                     waitUntilVisibilityOf(us5.addedProductShoppingCartText);
-                    myClick(us5.jackestLink);
+                    myClick(us5.jacketsLink);
                     break;
                 case "Beaumont Summit Kit":
                     myClick(us5.productNameLink.get(10));
@@ -135,7 +135,7 @@ public class AddingAndRemovingSteps extends Parent {
                     myClick(us5.productColor.get(randomGenerator(3)));
                     myClick(us5.addToCartBtn);
                     waitUntilVisibilityOf(us5.addedProductShoppingCartText);
-                    myClick(us5.jackestLink);
+                    myClick(us5.jacketsLink);
                     break;
             }
         }
@@ -168,7 +168,7 @@ public class AddingAndRemovingSteps extends Parent {
     @Then("The user should see There are no items in your shopping cart.")
     public void theUserShouldSeeThereAreNoItemsInYourShoppingCart() {
 
-        verifyContainsText(us5.succesMesage, "You have no items in your shopping cart.");
+        verifyContainsText(us5.successMessage, "You have no items in your shopping cart.");
     }
 
     @And("Emptying the Products From the Order box")

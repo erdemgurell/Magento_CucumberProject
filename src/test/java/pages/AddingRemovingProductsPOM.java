@@ -7,9 +7,9 @@ import utilities.GWD;
 
 import java.util.List;
 
-public class US705_Content extends Parent {
+public class AddingRemovingProductsPOM extends Parent {
 
-    public US705_Content() {
+    public AddingRemovingProductsPOM() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
@@ -41,7 +41,7 @@ public class US705_Content extends Parent {
     public WebElement okBtn;
 
     @FindBy(css = "[class='subtitle empty']")
-    public WebElement succesMesage;
+    public WebElement successMessage;
 
     @FindBy(xpath = "(//div[@class='swatch-attribute-options clearfix'])[1]/div")
     public List<WebElement> productSize;
@@ -55,7 +55,7 @@ public class US705_Content extends Parent {
     public List<WebElement> productNameLink;
 
     @FindBy(xpath = "(//*[text()='Jackets'])[3]")
-    public WebElement jackestLink;
+    public WebElement jacketsLink;
 
     @FindBy(css = "[class='message-success success message'] div")
     public WebElement addedProductShoppingCartText;

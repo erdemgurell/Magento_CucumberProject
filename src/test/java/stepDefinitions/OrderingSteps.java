@@ -4,18 +4,16 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import pages.Parent;
-import pages.US706_Content;
+import pages.OrderingPOM;
 import utilities.ConfigReader;
 
 import java.util.List;
 
 public class OrderingSteps extends Parent {
-    US706_Content cnt = new US706_Content();
+    OrderingPOM cnt = new OrderingPOM();
 
     @And("Enter the valid credentials in the placeholders provided")
     public void enterTheValidCredentials() {

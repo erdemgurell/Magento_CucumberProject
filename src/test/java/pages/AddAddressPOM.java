@@ -5,8 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.GWD;
 
-public class US703_Content extends Parent {
-    public US703_Content() {
+public class AddAddressPOM extends Parent {
+    public AddAddressPOM() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 

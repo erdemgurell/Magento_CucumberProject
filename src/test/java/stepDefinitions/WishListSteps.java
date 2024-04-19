@@ -6,13 +6,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import pages.Parent;
-import pages.US708_Content;
+import pages.WishListPOM;
 import utilities.ConfigReader;
 
 
 public class WishListSteps extends Parent {
 
-    US708_Content us8 = new US708_Content();
+    WishListPOM us8 = new WishListPOM();
 
     @Then("Click on the Sign In button")
     public void clickOnTheSignInButton() {
@@ -32,8 +32,8 @@ public class WishListSteps extends Parent {
         WebElement e = us8.getWebElement("products");
         hoverOver(e);
         wait.until(ExpectedConditions.
-                visibilityOf(us8.addToWLButtons.get(US708_Content.rand)));
-        myJsClick(us8.addToWLButtons.get(US708_Content.rand));
+                visibilityOf(us8.addToWLButtons.get(WishListPOM.rand)));
+        myJsClick(us8.addToWLButtons.get(WishListPOM.rand));
     }
 
     @Then("Check if the number of products in the Wish List is correct")

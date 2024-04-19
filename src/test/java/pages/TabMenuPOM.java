@@ -7,8 +7,8 @@ import utilities.GWD;
 
 import java.util.List;
 
-public class US704_Content extends Parent {
-    public US704_Content() {
+public class TabMenuPOM extends Parent {
+    public TabMenuPOM() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 

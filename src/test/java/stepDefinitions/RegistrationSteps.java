@@ -5,12 +5,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.Parent;
-import pages.US701_Content;
+import pages.RegistrationPOM;
 import utilities.ConfigReader;
 import utilities.GWD;
 
 public class RegistrationSteps extends Parent {
-    US701_Content us1 = new US701_Content();
+    RegistrationPOM us1 = new RegistrationPOM();
 
     @Given("Navigate to Magento website")
     public void navigateToMagentoWebsite() {

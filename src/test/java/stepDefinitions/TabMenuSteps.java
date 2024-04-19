@@ -3,22 +3,16 @@ package stepDefinitions;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import pages.Parent;
-import pages.US704_Content;
-import utilities.GWD;
+import pages.TabMenuPOM;
 
-import javax.tools.Tool;
-import java.awt.*;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class TabMenuSteps extends Parent {
-    US704_Content cnt = new US704_Content();
+    TabMenuPOM cnt = new TabMenuPOM();
 
     @And("Click the Main categories in the TAB Menu")
     public void clickTheMainCategories(DataTable links) {

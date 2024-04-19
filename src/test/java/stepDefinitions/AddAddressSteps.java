@@ -5,10 +5,10 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.support.ui.Select;
 import pages.Parent;
-import pages.US703_Content;
+import pages.AddAddressPOM;
 
 public class AddAddressSteps extends Parent {
-    US703_Content us3 = new US703_Content();
+    AddAddressPOM us3 = new AddAddressPOM();
 
     @Given("Click on the my Account")
     public void clickOnTheMyAccount() {

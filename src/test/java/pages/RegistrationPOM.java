@@ -7,9 +7,9 @@ import utilities.GWD;
 
 import java.util.List;
 
-public class US701_Content {
+public class RegistrationPOM {
 
-    public US701_Content() {
+    public RegistrationPOM() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
