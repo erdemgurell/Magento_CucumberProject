@@ -9,6 +9,7 @@ public class US707_Content extends Parent {
     public US707_Content() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
+
     @FindBy(css = "div[class='value'][itemprop='sku']")
     public WebElement productCodeText;
 

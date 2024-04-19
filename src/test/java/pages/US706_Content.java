@@ -11,6 +11,7 @@ public class US706_Content extends Parent {
     public US706_Content() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
+
     @FindBy(xpath = "//input[@id='email']")
     public WebElement email;
     @FindBy(xpath = "(//input[@id='pass'])[1]")
@@ -73,32 +74,54 @@ public class US706_Content extends Parent {
     public WebElement updateShoppingCart;
     @FindBy(xpath = "//span[contains(text(),'Ship Here')]")
     public WebElement shipHereBtn;
-    public WebElement getWebElement(String strWebElement){
 
-        switch (strWebElement){
+    public WebElement getWebElement(String strWebElement) {
 
-            case "gear"                  : return this.gear;
-            case "women"                 : return this.women;
-            case "bagsGr"                : return this.bagsGr;
-            case "hoodie1"               : return this.hoodie1;
-            case "hoodie2"               : return this.hoodie2;
-            case "hoodie3"               : return this.hoodie3;
-            case "nextBtn"               : return this.nextBtn;
-            case "radioBtn"              : return this.radioBtn;
-            case "quantity"              : return this.quantity;
-            case "viewCart"              : return this.viewCart;
-            case "quantity2"             : return this.quantity2;
-            case "jacketsWm"             : return this.jacketsWm;
-            case "hoodiesWm"             : return this.hoodiesWm;
-            case "womenTops"             : return this.womenTops;
-            case "shipHereBtn"           : return this.shipHereBtn;
-            case "addToCartBtn"          : return this.addToCartBtn;
-            case "shoppingCart"          : return this.shoppingCart;
-            case "placeOrderBtn"         : return this.placeOrderBtn;
-            case "shoppingCartText"      : return this.shoppingCartText;
-            case "updateShoppingCart"    : return this.updateShoppingCart;
-            case "proceedToCheckoutBtn"  : return this.proceedToCheckoutBtn;
-            case "defaultShippingAddress": return this.defaultShippingAddress;
+        switch (strWebElement) {
+            case "gear":
+                return this.gear;
+            case "women":
+                return this.women;
+            case "bagsGr":
+                return this.bagsGr;
+            case "hoodie1":
+                return this.hoodie1;
+            case "hoodie2":
+                return this.hoodie2;
+            case "hoodie3":
+                return this.hoodie3;
+            case "nextBtn":
+                return this.nextBtn;
+            case "radioBtn":
+                return this.radioBtn;
+            case "quantity":
+                return this.quantity;
+            case "viewCart":
+                return this.viewCart;
+            case "quantity2":
+                return this.quantity2;
+            case "jacketsWm":
+                return this.jacketsWm;
+            case "hoodiesWm":
+                return this.hoodiesWm;
+            case "womenTops":
+                return this.womenTops;
+            case "shipHereBtn":
+                return this.shipHereBtn;
+            case "addToCartBtn":
+                return this.addToCartBtn;
+            case "shoppingCart":
+                return this.shoppingCart;
+            case "placeOrderBtn":
+                return this.placeOrderBtn;
+            case "shoppingCartText":
+                return this.shoppingCartText;
+            case "updateShoppingCart":
+                return this.updateShoppingCart;
+            case "proceedToCheckoutBtn":
+                return this.proceedToCheckoutBtn;
+            case "defaultShippingAddress":
+                return this.defaultShippingAddress;
         }
         return null;
     }

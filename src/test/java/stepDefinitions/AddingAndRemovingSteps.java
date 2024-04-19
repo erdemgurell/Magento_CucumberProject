@@ -15,14 +15,13 @@ public class AddingAndRemovingSteps extends Parent {
 
     US705_Content us5 = new US705_Content();
 
-    @Given("Hoverover on the Element")
-    public void hoveroverOnTheElement(DataTable dt) {
+    @Given("Hover over on the Element")
+    public void hoverOverOnTheElement(DataTable dt) {
         List<String> list = dt.asList(String.class);
         for (int i = 0; i < list.size(); i++) {
             hoverOver(us5.getWebElement(list.get(i)));
 
         }
-
     }
 
     @And("Click on the Element")

@@ -1,4 +1,4 @@
-@WishList
+@WishList @SmokeTest @Regression
 Feature: Removing Products from the Wish List Functionality
 
   Background:

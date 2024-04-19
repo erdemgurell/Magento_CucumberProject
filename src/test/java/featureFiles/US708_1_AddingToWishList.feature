@@ -1,4 +1,4 @@
-@WishList
+@WishList @SmokeTest @Regression
 Feature: Adding Products to the Wish List Functionality
 
   Background:
@@ -7,7 +7,7 @@ Feature: Adding Products to the Wish List Functionality
     And Enter the email and password then click the login button
 
   Scenario: Add Products to the Wish List
-    Given Hoverover on the Element
+    Given Hover over on the Element
       | tableMen    |
       | subMenuTops |
 
@@ -18,7 +18,7 @@ Feature: Adding Products to the Wish List Functionality
 
     And Check if the number of products in the Wish List is correct
 
-    Then Hoverover on the Element
+    Then Hover over on the Element
       | tableMen |
 
     And Click on the Element in Dialog

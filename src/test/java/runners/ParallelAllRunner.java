@@ -16,8 +16,7 @@ public class ParallelAllRunner extends AbstractTestNGCucumberTests {
 
     @BeforeClass
     @Parameters("browserType")
-    public void beforeClass(String browserName)
-    {
+    public void beforeClass(String browserName) {
         GWD.browserName.set(browserName);
     }
 }

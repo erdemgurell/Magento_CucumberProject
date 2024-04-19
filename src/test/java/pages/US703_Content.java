@@ -96,10 +96,8 @@ public class US703_Content extends Parent {
             case "zip":
                 return this.zip;
 
-
         }
         return null;
     }
-
 
 }

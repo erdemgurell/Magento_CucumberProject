@@ -1,4 +1,4 @@
-@SmokeTest
+@SmokeTest @Regression
 Feature: TAB Menu Functionality
 
   Background:

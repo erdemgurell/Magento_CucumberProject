@@ -1,3 +1,4 @@
+@SmokeTest
 Feature: Search Functionality
 
   Background:
@@ -6,7 +7,7 @@ Feature: Search Functionality
     And Enter the email and password then click the login button
 
   Scenario: Search Product by Product Code
-    Given Hoverover on the Element
+    Given Hover over on the Element
       | tableMen    |
       | subMenuTops |
 

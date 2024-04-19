@@ -8,7 +8,9 @@ import utilities.GWD;
 import java.util.List;
 
 public class US704_Content extends Parent {
-    public US704_Content() {PageFactory.initElements(GWD.getDriver(), this);}
+    public US704_Content() {
+        PageFactory.initElements(GWD.getDriver(), this);
+    }
 
     @FindBy(xpath = "(//div[@id='store.menu']//ul)[1]/li")
     public List<WebElement> tabMenuVerification;
@@ -81,51 +83,87 @@ public class US704_Content extends Parent {
     @FindBy(xpath = "(((//div[@id='store.menu']//ul)[1]/li)[4]/ul/li)[3]")
     public WebElement watchesGr;
 
-    public WebElement getWebElement(String strWebElement){
+    public WebElement getWebElement(String strWebElement) {
 
-        switch (strWebElement){
-            case "whatsNew"      : return this.whatsNew;
-            case "women"         : return this.women;
-            case "men"           : return this.men;
-            case "gear"          : return this.gear;
-            case "training"      : return this.training;
-            case "sale"          : return this.sale;
-            case "trainingSubCat": return this.trainingSubCat;
-            case "womenTops"     : return this.womenTops;
-            case "womenBottoms"  : return this.womenBottoms;
-            case "menTops"       : return this.menTops;
-            case "menBottoms"    : return this.menBottoms;
-            case "jacketsWm "    : return this.jacketsWm ;
-            case "hoodiesWm "    : return this.hoodiesWm;
-            case "teesWm    "    : return this.teesWm;
-            case "brasAndTanksWm": return this.brasAndTanksWm;
-            case "pantsWm  "     : return this.pantsWm;
-            case "shortsWm "     : return this.shortsWm;
-            case "jacketsMn"     : return this.jacketsMn;
-            case "hoodiesMn"     : return this.hoodiesMn;
-            case "teesMn   "     : return this.teesMn;
-            case "tanksMn  "     : return this.tanksMn;
-            case "pantsMn  "     : return this.pantsMn;
-            case "shortsMn "     : return this.shortsMn;
-            case "bagsGr   "     : return this.bagsGr;
-            case "fitnessGr"     : return this.fitnessGr;
-            case "watchesGr"     : return this.watchesGr;
+        switch (strWebElement) {
+            case "whatsNew":
+                return this.whatsNew;
+            case "women":
+                return this.women;
+            case "men":
+                return this.men;
+            case "gear":
+                return this.gear;
+            case "training":
+                return this.training;
+            case "sale":
+                return this.sale;
+            case "trainingSubCat":
+                return this.trainingSubCat;
+            case "womenTops":
+                return this.womenTops;
+            case "womenBottoms":
+                return this.womenBottoms;
+            case "menTops":
+                return this.menTops;
+            case "menBottoms":
+                return this.menBottoms;
+            case "jacketsWm ":
+                return this.jacketsWm;
+            case "hoodiesWm ":
+                return this.hoodiesWm;
+            case "teesWm    ":
+                return this.teesWm;
+            case "brasAndTanksWm":
+                return this.brasAndTanksWm;
+            case "pantsWm  ":
+                return this.pantsWm;
+            case "shortsWm ":
+                return this.shortsWm;
+            case "jacketsMn":
+                return this.jacketsMn;
+            case "hoodiesMn":
+                return this.hoodiesMn;
+            case "teesMn   ":
+                return this.teesMn;
+            case "tanksMn  ":
+                return this.tanksMn;
+            case "pantsMn  ":
+                return this.pantsMn;
+            case "shortsMn ":
+                return this.shortsMn;
+            case "bagsGr   ":
+                return this.bagsGr;
+            case "fitnessGr":
+                return this.fitnessGr;
+            case "watchesGr":
+                return this.watchesGr;
 
         }
         return null;
     }
-    public List<WebElement> getListElement(String strListElement){
 
-        switch (strListElement){
-            case "tabMenuVerification" : return this.tabMenuVerification;
-            case "womenTopsAndBottoms" : return this.womenTopsAndBottoms;
-            case "menTopsAndBottoms"   : return this.menTopsAndBottoms;
-            case "gearSubCategory"     : return this.gearSubCategory;
-            case "womenTopsSubCat"     : return this.womenTopsSubCat;
-            case "womenBottomsSubCat"  : return this.womenBottomsSubCat;
-            case "menTopsSubCat"       : return this.menTopsSubCat;
-            case "menBottomsSubCat"    : return this.menBottomsSubCat;
-            case "tabMenu"             : return this.tabMenu;
+    public List<WebElement> getListElement(String strListElement) {
+
+        switch (strListElement) {
+            case "tabMenuVerification":
+                return this.tabMenuVerification;
+            case "womenTopsAndBottoms":
+                return this.womenTopsAndBottoms;
+            case "menTopsAndBottoms":
+                return this.menTopsAndBottoms;
+            case "gearSubCategory":
+                return this.gearSubCategory;
+            case "womenTopsSubCat":
+                return this.womenTopsSubCat;
+            case "womenBottomsSubCat":
+                return this.womenBottomsSubCat;
+            case "menTopsSubCat":
+                return this.menTopsSubCat;
+            case "menBottomsSubCat":
+                return this.menBottomsSubCat;
+            case "tabMenu":
+                return this.tabMenu;
         }
         return null;
     }

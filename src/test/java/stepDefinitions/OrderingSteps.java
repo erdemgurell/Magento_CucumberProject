@@ -16,12 +16,14 @@ import java.util.List;
 
 public class OrderingSteps extends Parent {
     US706_Content cnt = new US706_Content();
+
     @And("Enter the valid credentials in the placeholders provided")
     public void enterTheValidCredentials() {
         cnt.mySendKeys(cnt.email, ConfigReader.getProperty("email"));
         cnt.mySendKeys(cnt.password, ConfigReader.getProperty("password"));
         cnt.myClick(cnt.signInBtn);
     }
+
     @When("Hover over the tab menu categories")
     public void hoverOverTheTabMenuCategories(DataTable links) {
         List<String> linkList = links.asList(String.class);
@@ -31,6 +33,7 @@ public class OrderingSteps extends Parent {
             cnt.wait(2);
         }
     }
+
     @And("Click on the element in content")
     public void clickOnTheProduct(DataTable links) {
         List<String> linkList = links.asList(String.class);
@@ -41,6 +44,7 @@ public class OrderingSteps extends Parent {
             cnt.wait(2);
         }
     }
+
     @And("Add the product to the cart by selecting size and color.")
     public void addTheProductToTheCartBySelectingSizeAndColor() {
 
@@ -62,6 +66,7 @@ public class OrderingSteps extends Parent {
         cnt.waitUntilVisibilityOf(cnt.shoppingCartText);
         Assert.assertTrue(cnt.shoppingCartText.isDisplayed(), "No message is present !");
     }
+
     @And("View the shopping cart and update the quantifies or remove a product if necessary")
     public void viewTheShoppingCartAndUpdate() {
         cnt.myClick(cnt.shoppingCart);
@@ -73,11 +78,13 @@ public class OrderingSteps extends Parent {
         cnt.waitUntilElementToBeClickable(cnt.updateShoppingCart);
         cnt.myClick(cnt.updateShoppingCart);
     }
+
     @And("Select the default address or enter a new one")
     public void selectTheDefaultAddress() {
         cnt.waitUntilElementToBeClickable(cnt.shipHereBtn);
         cnt.myClick(cnt.shipHereBtn);
     }
+
     @And("Check if the billing address matches the shipping address")
     public void checkTheBillingAndShippingAddress() {
         cnt.waitUntilVisibilityOf(cnt.sameShippingAndBillingAdd);
@@ -85,6 +92,7 @@ public class OrderingSteps extends Parent {
         Assert.assertTrue(cnt.sameShippingAndBillingAdd.isSelected(),
                 "Please click the \"Check\" button if your shipping and billing addresses are the same!");
     }
+
     @Then("User should be able to see the confirmation message and the order number on the success page")
     public void confirmationMessage() {
         cnt.waitUntilVisibilityOf(cnt.confirmationMsg);

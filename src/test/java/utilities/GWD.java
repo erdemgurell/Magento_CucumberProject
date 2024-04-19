@@ -10,8 +10,8 @@ import java.time.Duration;
 import java.util.Locale;
 
 public class GWD {
-    private static ThreadLocal<WebDriver> threadDriver = new ThreadLocal<>(); // her bir thread'e özel static
-    public static ThreadLocal<String> browserName = new ThreadLocal<>(); // her bir thread'e özel browser name
+    private static ThreadLocal<WebDriver> threadDriver = new ThreadLocal<>();
+    public static ThreadLocal<String> browserName = new ThreadLocal<>();
 
 
     public static WebDriver getDriver() {
@@ -19,7 +19,7 @@ public class GWD {
         Locale.setDefault(new Locale("EN"));
         System.setProperty("user.language", "EN");
 
-        if (browserName.get() == null) {   // switch null ise default'a gönderemez ondan dolayı böyle
+        if (browserName.get() == null) {
             browserName.set("chrome");
         }
 
@@ -56,11 +56,11 @@ public class GWD {
         }
 
         //driver kapat
-        if (threadDriver.get() != null) { //bu hatta driver var ise
+        if (threadDriver.get() != null) {
             threadDriver.get().quit();
-            WebDriver driver = threadDriver.get();
-            driver = null;
-            threadDriver.set(driver);//bu hattaki driver NULL oldu
+            WebDriver driver =
+                    driver = null;
+            threadDriver.set(driver);
         }
     }
 

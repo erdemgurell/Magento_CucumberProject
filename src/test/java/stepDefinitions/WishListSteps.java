@@ -66,7 +66,7 @@ public class WishListSteps extends Parent {
         hoverOver(e);
         wait.until(ExpectedConditions.
                 visibilityOf(us8.quantityPlaceholders.get(0)));
-        mySendKeys(us8.quantityPlaceholders.get(0),qt);
+        mySendKeys(us8.quantityPlaceholders.get(0), qt);
         hoverOver(us8.wlCounter);
     }
 

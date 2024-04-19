@@ -21,8 +21,10 @@ public class US705_Content extends Parent {
 
     @FindBy(xpath = "(//*[text()='Jackets'])[2]")
     public WebElement subMenuJackets;
+
     @FindBy(css = "[class='product name product-item-name']")
     public List<WebElement> productItemName;
+
     @FindBy(xpath = "(//span[@class='price'])[1]")
     public WebElement subTotal;
 
@@ -61,13 +63,14 @@ public class US705_Content extends Parent {
 
     public WebElement getWebElement(String elements) {
         switch (elements) {
-            case "tableMen": return this.tableMen;
-            case "subMenuTops": return this.subMenuTops;
-            case "subMenuJackets": return this.subMenuJackets;
-
+            case "tableMen":
+                return this.tableMen;
+            case "subMenuTops":
+                return this.subMenuTops;
+            case "subMenuJackets":
+                return this.subMenuJackets;
         }
         return null;
     }
-
 
 }

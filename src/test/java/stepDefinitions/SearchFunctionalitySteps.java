@@ -36,6 +36,5 @@ public class SearchFunctionalitySteps extends Parent {
             myClick(us7.searchBoxCl);
             verifyContainsText(us7.noResultText, "no results.");
         }
-
     }
 }

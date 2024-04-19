@@ -29,6 +29,7 @@ public class TabMenuSteps extends Parent {
             cnt.myClick(linkWebElement);
         }
     }
+
     @Then("User should be able to see the all main and sub categories")
     public void userShouldBeAbleToSeeTheAllMainAndSubCategories() {
         List<String> expectedCategory = Arrays.asList("whatsNew", "women", "womenTops", "womenBottoms",

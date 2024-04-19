@@ -21,6 +21,7 @@ public class DataTableSteps extends Parent {
             myClick(us8.getWebElement(list.get(i)));
         }
     }
+
     @And("User sending the keys in Dialog")
     public void userSendingTheKeysInDialog(DataTable dt) {
         List<List<String>> list = dt.asLists(String.class);

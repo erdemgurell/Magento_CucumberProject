@@ -1,3 +1,4 @@
+@SmokeTest
 Feature: Login Functionality
 
   Background:
@@ -5,6 +6,7 @@ Feature: Login Functionality
     Then Click on the Sign In button
 
   Scenario: Login Functionality with valid information
+
     Given Enter the email and password then click the login button
 
   Scenario Outline: Login Functionality with invalid information

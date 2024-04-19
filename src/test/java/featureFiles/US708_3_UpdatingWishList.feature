@@ -1,4 +1,4 @@
-@WishList
+@WishList @SmokeTest @Regression
 Feature: Updating Products from the Wish List Functionality
 
   Background:

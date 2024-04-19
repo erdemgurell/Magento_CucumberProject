@@ -1,3 +1,4 @@
+@SmokeTest
 Feature:Adding and removing items functionality
 
   Background:
@@ -6,9 +7,7 @@ Feature:Adding and removing items functionality
     And Enter the email and password then click the login button
 
   Scenario: Adding and removing items from the shopping cart
-    Given Hoverover on the Element
-      | tableMen    |
-      | subMenuTops |
+    Given Hover over on the Element
 
     And Click on the Element
       | subMenuJackets |
