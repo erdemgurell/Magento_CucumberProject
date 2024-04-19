@@ -24,21 +24,21 @@ public class ExcelUtility {
         ArrayList<ArrayList<String>> table = new ArrayList<>();
         for (int i = 0; i < sheet.getPhysicalNumberOfRows(); i++) {
 
-            ArrayList<String> satir = new ArrayList<>();
+            ArrayList<String> row = new ArrayList<>();
             for (int j = 0; j < column; j++) {
-                satir.add(sheet.getRow(i).getCell(j).toString());
+                row.add(sheet.getRow(i).getCell(j).toString());
             }
 
-            table.add(satir);
+            table.add(row);
         }
 
         return table;
     }
 
     public static void writeToExcel(String path, String testResult) {
-        File dosya = new File(path);
+        File file = new File(path);
 
-        if (!dosya.exists()) {
+        if (!file.exists()) {
             XSSFWorkbook workbook = new XSSFWorkbook();
             XSSFSheet sheet = workbook.createSheet("Scenarios");
 
