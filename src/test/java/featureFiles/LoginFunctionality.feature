@@ -1,4 +1,4 @@
-@SmokeTest
+@SmokeTest @Login
 Feature: Login Functionality
 
   Background:

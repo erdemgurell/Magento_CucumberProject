@@ -1,4 +1,4 @@
-@SmokeTest
+@SmokeTest @AddingRemovingProduct
 Feature:Adding and removing items functionality
 
   Background:

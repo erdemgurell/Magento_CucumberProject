@@ -1,4 +1,4 @@
-@SmokeTest
+@SmokeTest @Registration
 Feature: User Registration
 
   Background:

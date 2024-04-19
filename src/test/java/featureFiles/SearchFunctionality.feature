@@ -1,4 +1,4 @@
-@SmokeTest
+@SmokeTest @SearchFunction
 Feature: Search Functionality
 
   Background:

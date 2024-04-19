@@ -1,4 +1,4 @@
-@SmokeTest
+@SmokeTest @Ordering
 Feature: Product Purchase and Payment Process
 
   Background:

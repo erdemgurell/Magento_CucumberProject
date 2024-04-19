@@ -1,4 +1,4 @@
-@SmokeTest @Regression
+@SmokeTest @Regression @Address
 Feature: Add Address Functionality
 
   Background:
